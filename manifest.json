@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Fnac Fast Checkout",
+  "version": "1.1",
+  "description": "Automatisation du panier, relais et paiement sur la Fnac",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.fnac.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
